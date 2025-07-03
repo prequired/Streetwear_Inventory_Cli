@@ -1,0 +1,1 @@
+"""Database package for streetwear inventory CLI"""

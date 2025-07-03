@@ -1,0 +1,38 @@
+# Include documentation files
+include README.md
+include CHANGELOG.md
+include LICENSE
+include CONTRIBUTING.md
+include QUICK_START.md
+
+# Include configuration files
+include requirements.txt
+include sample_config.yaml
+
+# Include package data
+recursive-include inv *.py
+recursive-include tests *.py
+
+# Exclude development and temporary files
+exclude progress.json
+exclude track_progress.py
+exclude validate_phase.py
+exclude implementation_*.md
+
+# Exclude build artifacts
+exclude .gitignore
+exclude .coverage
+exclude *.db
+exclude *.sqlite*
+
+# Exclude photos and exports
+exclude photos/
+exclude *.csv
+exclude *_export.*
+exclude *_backup.*
+
+# Exclude IDE and OS files
+exclude .DS_Store
+exclude Thumbs.db
+exclude .vscode/
+exclude .idea/

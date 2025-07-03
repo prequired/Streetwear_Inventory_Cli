@@ -1,0 +1,14 @@
+database:
+  url: "sqlite:///streetwear_inventory.db"
+
+brand_prefixes:
+  branda: "BRA"
+  brandb: "BRB"
+  brandc: "BRC"
+
+defaults:
+  location: "backroom-A1"
+  consignment_split: 70
+
+photos:
+  storage_path: "./photos"

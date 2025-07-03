@@ -1,0 +1,80 @@
+# Production Configuration Template
+# Copy this file to config.yaml and customize for your production environment
+
+database:
+  # Production database URL - SQLite recommended for single-user systems
+  # For production use, specify absolute path for better security
+  # Local/Development: sqlite:///streetwear_inventory.db
+  # Production: sqlite:///var/lib/streetwear/production_inventory.db
+  url: "sqlite:///var/lib/streetwear/production_inventory.db"
+
+service:
+  # Unique service key for your installation
+  key: "prod_service_key_change_me"
+
+defaults:
+  # Default location code for new items
+  location: "MAIN"
+  
+  # Default consignment split percentage (consigner gets this %, you get remainder)
+  consignment_split: 70
+
+storage:
+  # Photo storage directory (ensure this has sufficient space)
+  photos_path: "/var/lib/streetwear-inventory/photos"
+  
+  # Maximum photo file size in MB
+  max_photo_size: 10
+  
+  # Photo optimization quality (1-100, higher = better quality/larger file)
+  photo_quality: 85
+
+api:
+  # API server configuration (if using REST API)
+  host: "127.0.0.1"
+  port: 5000
+  debug: false
+  
+  # CORS origins for web clients (use specific domains in production)
+  cors_origins: ["https://yourdomain.com"]
+
+backup:
+  # Automatic backup settings
+  enabled: true
+  
+  # Backup directory
+  directory: "/var/backups/streetwear-inventory"
+  
+  # Keep backups for this many days
+  retention_days: 30
+  
+  # Backup schedule (daily, weekly, monthly)
+  schedule: "daily"
+
+security:
+  # Enable audit logging
+  audit_logging: true
+  
+  # Log file location
+  audit_log_path: "/var/log/streetwear-inventory/audit.log"
+  
+  # Require confirmation for destructive operations
+  require_confirmation: true
+
+performance:
+  # Database connection pool size
+  pool_size: 5
+  
+  # Query timeout in seconds
+  query_timeout: 30
+  
+  # Enable database query logging (disable in production for performance)
+  log_queries: false
+
+# Environment-specific overrides
+# These can be set via environment variables:
+# - DATABASE_URL
+# - SERVICE_KEY
+# - PHOTOS_PATH
+# - API_HOST
+# - API_PORT
