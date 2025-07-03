@@ -2,10 +2,9 @@
 
 **Professional-grade inventory management system for streetwear resellers**
 
-[![Tests](https://img.shields.io/badge/tests-156%20passing-green)](tests/)
-[![Python](https://img.shields.io/badge/python-3.8%2B-blue)](https://python.org)
-[![Commands](https://img.shields.io/badge/commands-34-orange)](inv/cli.py)
-[![Coverage](https://img.shields.io/badge/coverage-43%25-yellow)](tests/)
+[![CI](https://github.com/prequired/Streetwear_Inventory_Cli/actions/workflows/ci.yml/badge.svg)](https://github.com/prequired/Streetwear_Inventory_Cli/actions/workflows/ci.yml)
+[![PyPI version](https://badge.fury.io/py/streetwear-inventory-cli.svg)](https://badge.fury.io/py/streetwear-inventory-cli)
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
 ## 🚀 **Quick Start**
 
